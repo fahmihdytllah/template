@@ -1,0 +1,2 @@
+# template
+Assets web template
