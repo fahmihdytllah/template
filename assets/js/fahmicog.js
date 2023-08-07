@@ -458,9 +458,9 @@ var switchLang = document.querySelectorAll('span[data-lang]');
 
 function setLang(lang) {
   if (systemLanguage === lang) {
-    setCookie('googtrans', '/'+ systemLanguage +'/' + lang, 1);
-  } else {
     setCookie('googtrans', '', 1);
+  } else {
+    setCookie('googtrans', '/'+ systemLanguage +'/' + lang, 1);
   }
   localStorage.setItem('myLang', lang);
   location.reload();
