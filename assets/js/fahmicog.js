@@ -464,7 +464,11 @@ if (localStorage.getItem('myLang') === null) {
 var switchLang = document.querySelectorAll('span[data-lang]');
 
 function setLang(lang) {
-  setCookie('googtrans', '/id/' + lang, 1);
+  if (systemLanguage === lang) {
+    setCookie('googtrans', '/'+ systemLanguage +'/' + lang, 1);
+  } else {
+    setCookie('googtrans', '', 1);
+  }
   localStorage.setItem('myLang', lang);
   location.reload();
 }
